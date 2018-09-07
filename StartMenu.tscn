@@ -117,4 +117,8 @@ text = "Wyjcie"
 flat = false
 align = 1
 
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Wyjście" to="." method="_on_Wyjcie_pressed"]
+
 
