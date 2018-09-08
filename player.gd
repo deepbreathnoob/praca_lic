@@ -39,6 +39,8 @@ func _physics_process(delta):
 		else:
 			$Sprite.play("Fall")
 			print(motion.y)
+			if motion.y > 2000:
+				get_tree().change_scene("StartMenu.tscn")
 			
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.05)
