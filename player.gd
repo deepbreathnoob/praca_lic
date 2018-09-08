@@ -2,9 +2,10 @@ extends KinematicBody2D
 
 const UP = Vector2(0,-1);
 const GRAVITY = 20
-const MAX_SPEED = 200
+
+const MAX_SPEED = 205
 const ACCELERATION = 50
-const JUMP_HEIGHT = -550
+const JUMP_HEIGHT = -555
 var motion = Vector2()
 
 
@@ -37,9 +38,13 @@ func _physics_process(delta):
 			$Sprite.play("Jump")
 		else:
 			$Sprite.play("Fall")
+			print(motion.y)
+			if motion.y > 2000:
+				get_tree().change_scene("StartMenu.tscn")
+			
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.05)
-	
+
 	motion = move_and_slide(motion, UP)
 	
 	pass
