@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://JungleTiles.tres" type="TileSet" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gate.tscn" type="PackedScene" id=3]
+
+[node name="scene2" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -655334, 11, 0, -655333, 13, 0, -458724, 11, 0, -458723, 13, 0, -262114, 11, 0, -262113, 12, 0, -262112, 13, 0, -65527, 0, 0, -65526, 3, 0, -65525, 12, 0, -65524, 12, 0, -65523, 12, 0, -65522, 12, 0, -65521, 12, 0, -65520, 12, 0, -65519, 4, 0, -65518, 2, 0, -65503, 11, 0, -65502, 12, 0, -65501, 12, 0, -65500, 13, 0, 131108, 0, 0, 131109, 1, 0, 131110, 1, 0, 131111, 1, 0, 131112, 1, 0, 131113, 9, 0, 131114, 8, 0, 327686, 7, 0, 327687, 10, 0, 327688, 2, 0, 327710, 0, 0, 327711, 1, 0, 327712, 3, 0, 327713, 12, 0, 327714, 13, 0, 458755, 6, 0, 458756, 7, 0, 458757, 7, 0, 458758, 8, 0, 524324, 11, 0, 524325, 12, 0, 524326, 12, 0, 524327, 12, 0, 524328, 12, 0, 524329, 12, 0, 524330, 12, 0, 524331, 12, 0, 524332, 12, 0, 524333, 12, 0, 524334, 12, 0, 524335, 12, 0, 524336, 12, 0, 524337, 12, 0, 524338, 12, 0, 524339, 12, 0, 524340, 12, 0, 524341, 13, 0, 655361, 6, 0, 655362, 7, 0, 655363, 8, 0, 720930, 11, 0, 720931, 12, 0, 720932, 13, 0, 917536, 11, 0, 917537, 12, 0, 917538, 13, 0, 1114142, 11, 0, 1114143, 12, 0, 1114144, 13, 0, 1310748, 11, 0, 1310749, 12, 0, 1310750, 13, 0, 1507354, 11, 0, 1507355, 12, 0, 1507356, 13, 0, 1703958, 11, 0, 1703959, 12, 0, 1703960, 12, 0, 1703961, 12, 0, 1703962, 13, 0, 1769491, 11, 0, 1769492, 12, 0, 1769493, 13, 0, 1835023, 11, 0, 1835024, 12, 0, 1835025, 12, 0, 1835026, 13, 0, 1966088, 11, 0, 1966089, 12, 0, 1966090, 12, 0, 1966091, 12, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 53.8241, 274.268 )
+
+[node name="gate" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 320, -64 )
+next_scene = "res://StartMenu.tscn"
+
+
