@@ -12,15 +12,13 @@ extents = Vector2( 16, 16 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="JungleTiles" type="Node"]
+[node name="JungleTiles" type="Node" index="0"]
 
 [node name="Flores" type="Node" parent="." index="0"]
 
-editor/display_folded = true
-
 [node name="0" type="Sprite" parent="Flores" index="0"]
 
-position = Vector2( 0, 64 )
+position = Vector2( -832, 160 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
