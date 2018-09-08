@@ -33,7 +33,7 @@ position = Vector2( 53.8241, 274.268 )
 
 [node name="gate" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -64 )
-next_scene = "res://StartMenu.tscn"
+position = Vector2( 320, -96 )
+next_scene = "res://scene3.tscn"
 
 
