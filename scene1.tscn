@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://JungleTiles.tres" type="TileSet" id=1]
+[ext_resource path="res://player.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Player/Idle0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Player/Run0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/Run1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/Run2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player/Run3.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Player/Run4.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Player/Run7.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 16.0
+height = 26.0
+
+[node name="scene1" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65526, 11, 0, 65527, 12, 0, 65528, 12, 0, 65529, 13, 0, 22, 0, 0, 23, 1, 0, 24, 1, 0, 25, 2, 0, 262131, 11, 0, 262132, 12, 0, 262133, 13, 0, 262140, 0, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 2, 0, 327697, 0, 0, 327698, 1, 0, 327699, 1, 0, 327700, 1, 0, 327701, 2, 0, 458736, 11, 0, 458737, 12, 0, 458738, 13, 0, 458755, 0, 0, 458756, 1, 0, 458757, 1, 0, 458758, 2, 0, 458761, 0, 0, 458762, 2, 0, 458765, 0, 0, 458766, 1, 0, 458767, 1, 0, 458768, 1, 0, 458769, 2, 0, 655347, 11, 0, 655348, 12, 0, 655349, 13, 0, 589824, 14, 0, 589825, 15, 0, 589826, 15, 0, 589827, 15, 0, 589828, 15, 0, 589829, 16, 0, 655360, 0, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 2, 0, 851952, 11, 0, 851953, 12, 0, 851954, 13, 0, 917500, 11, 0, 917501, 12, 0, 917502, 13, 0, 983026, 11, 0, 983027, 12, 0, 983028, 13, 0, 1048568, 11, 0, 1048569, 12, 0, 1048570, 13, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="player" type="KinematicBody2D" parent="." index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="player" index="0"]
+
+frames = SubResource( 1 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" index="1"]
+
+position = Vector2( 0.465164, 3.38506 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+
