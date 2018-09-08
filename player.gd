@@ -39,7 +39,7 @@ func _physics_process(delta):
 		else:
 			$Sprite.play("Fall")
 		if friction == true:
-			motion.x = lerp(motion.x, 0, 0.09)
+			motion.x = lerp(motion.x, 0, 0.05)
 	
 	motion = move_and_slide(motion, UP)
 	
