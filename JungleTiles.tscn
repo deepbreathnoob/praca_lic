@@ -18,6 +18,7 @@ extents = Vector2( 10, 10 )
 
 [node name="0" type="Sprite" parent="Flores" index="0"]
 
+editor/display_folded = true
 position = Vector2( -832, 160 )
 texture = ExtResource( 1 )
 centered = false
@@ -162,7 +163,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="5" type="Sprite" parent="Flores" index="5"]
 
-editor/display_folded = true
 position = Vector2( 128, 128 )
 texture = ExtResource( 1 )
 centered = false
@@ -422,6 +422,8 @@ shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Covers" type="Node" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="100" type="Sprite" parent="Covers" index="0"]
 
